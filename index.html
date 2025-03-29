@@ -48,4 +48,49 @@
         </ul>
     </div>
 </body>
+    <react>const players = [
+  {
+    name: "LeBron James",
+    image: "https://example.com/lebron.jpg", // Replace with actual image
+    description:
+      "LeBron James is one of the greatest basketball players of all time. Known for his versatility, he can play and defend multiple positions. His leadership, basketball IQ, and athleticism make him a dominant force in the game, even in his late 30s. With multiple championships and MVP awards, LeBron continues to be a significant figure in the NBA."
+  },
+  {
+    name: "Stephen Curry",
+    image: "https://example.com/curry.jpg", // Replace with actual image
+    description:
+      "Stephen Curry revolutionized the game with his incredible three-point shooting. As the greatest shooter in NBA history, he forces defenses to extend beyond the arc, creating opportunities for his teammates. His ball-handling, quick release, and deep shooting range make him nearly impossible to guard."
+  },
+  {
+    name: "Giannis Antetokounmpo",
+    image: "https://example.com/giannis.jpg", // Replace with actual image
+    description:
+      "Giannis Antetokounmpo, known as the 'Greek Freak,' is a dominant player due to his unmatched athleticism and relentless drive. With his ability to score inside, defend, and run the floor, he has won multiple MVP awards and led the Milwaukee Bucks to an NBA championship."
+  }
+];
+
+export default function BasketballWebsite() {
+  return (
+    <div className="p-4 max-w-4xl mx-auto text-center">
+      <h1 className="text-4xl font-bold mb-6">How to Play Basketball</h1>
+      <p className="text-lg mb-6">
+        Basketball is a dynamic and fast-paced sport that requires a combination of skill, strategy, and teamwork. To play the game, a team must score points by shooting the ball into the opposing team's hoop while preventing them from doing the same. The game consists of dribbling, passing, shooting, and defense. Mastering the fundamentals, such as proper footwork, ball control, and decision-making, is crucial to excelling. Players must work together, set screens, and find open teammates to create high-percentage scoring opportunities. With continuous practice and understanding of game tactics, anyone can improve and enjoy the sport of basketball.
+      </p>
+      <h2 className="text-3xl font-semibold mb-4">Popular NBA Players</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {players.map((player) => (
+          <div key={player.name} className="bg-gray-100 p-4 rounded-xl shadow-lg">
+            <img
+              src={player.image}
+              alt={player.name}
+              className="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <h3 className="text-xl font-bold">{player.name}</h3>
+            <p className="text-sm mt-2">{player.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}</react>
 </html>
