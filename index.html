@@ -67,22 +67,10 @@
 
 
     <div className="p-4 max-w-4xl mx-auto text-center">
-      <h1 className="text-4xl font-bold mb-6">How to Play Basketball</h1>
+      <h4 className="text-4xl font-bold mb-6">How to Play Basketball</h4>
       <p className="text-lg mb-6">
         Basketball is a dynamic and fast-paced sport that requires a combination of skill, strategy, and teamwork. To play the game, a team must score points by shooting the ball into the opposing team's hoop while preventing them from doing the same. The game consists of dribbling, passing, shooting, and defense. Mastering the fundamentals, such as proper footwork, ball control, and decision-making, is crucial to excelling. Players must work together, set screens, and find open teammates to create high-percentage scoring opportunities. With continuous practice and understanding of game tactics, anyone can improve and enjoy the sport of basketball.
       </p>
-      <h2 className="text-3xl font-semibold mb-4">Popular NBA Players</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {players.map((player) => (
-          <div key={player.name} className="bg-gray-100 p-4 rounded-xl shadow-lg">
-            <img
-              src={player.image}
-              alt={player.name}
-              className="w-full h-48 object-cover rounded-lg mb-4"
-            />
-            <h3 className="text-xl font-bold">{player.name}</h3>
-            <p className="text-sm mt-2">{player.description}</p>
-          </div>
         ))}
       </div>
     </div>
